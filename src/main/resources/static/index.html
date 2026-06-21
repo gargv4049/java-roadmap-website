@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Learning Roadmap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">JavaRoadmap</div>
+    <nav>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#admin">Add Topic</a>
+        <a href="/api/roadmap/phases" target="_blank">API</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="badge">0 Level to Advanced Level</div>
+    <h1>Java Learning Roadmap</h1>
+    <p>
+        Learn Java step-by-step: basics, OOPs, collections, DSA, MySQL,
+        Spring Boot, REST APIs and advanced backend development.
+    </p>
+
+    <div class="progress-card">
+        <div class="progress-top">
+            <span id="progressText">Loading progress...</span>
+            <strong id="progressPercent">0%</strong>
+        </div>
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+</section>
+
+<main>
+    <section id="roadmap" class="roadmap-section">
+        <h2>Complete Roadmap</h2>
+        <div id="phaseContainer" class="phase-container">
+            <p class="loading">Loading roadmap...</p>
+        </div>
+    </section>
+
+    <section id="admin" class="admin-section">
+        <h2>Add New Topic</h2>
+        <p class="small-text">
+            Use this form to add your own topic into any roadmap phase.
+        </p>
+
+        <form id="topicForm" class="admin-form">
+            <input type="number" id="phaseId" placeholder="Phase ID" required>
+            <input type="number" id="topicOrder" placeholder="Topic Order" required>
+            <input type="text" id="topicName" placeholder="Topic Name" required>
+            <textarea id="topicDescription" placeholder="Topic Description"></textarea>
+
+            <label class="checkbox-row">
+                <input type="checkbox" id="projectBased">
+                Project based topic
+            </label>
+
+            <button type="submit">Add Topic</button>
+        </form>
+
+        <p id="formMessage"></p>
+    </section>
+</main>
+
+<footer>
+    <p>Created for Java learning practice using Spring Boot + MySQL + HTML/CSS/JS.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
